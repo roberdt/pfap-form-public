@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 class Pfapfooter extends Component {
-    /*const classes = useStyles();*/
 
     constructor(props) {
         super(props);
@@ -28,8 +27,6 @@ class Pfapfooter extends Component {
             <div style={footerHTML}>
                 <br/>
                 <span style={footerStyle}>Copyright &#169; 2014 - 2020 SafetyNetAccess.org &trade;   . All Rights Reserved.</span>
-                <br/>
-                <br/>
                 <br/>
             </div>
         );
