@@ -28,6 +28,7 @@ class Pfapfooter extends Component {
                 <br/>
                 <span style={footerStyle}>Copyright &#169; 2014 - 2020 SafetyNetAccess.org &trade;   . All Rights Reserved.</span>
                 <br/>
+                <br/>
             </div>
         );
     }
