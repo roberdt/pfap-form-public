@@ -3,6 +3,8 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
+import Link from 'next/link'
+import About from "../../about";
 
 export default function Pfapmenulist() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -42,8 +44,12 @@ export default function Pfapmenulist() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem style={divStyle.myfont} onClick={handleClose}>Henry Ford Health System</MenuItem>
-                <MenuItem style={divStyle.myfont} onClick={handleClose}>Beaumont Hospital</MenuItem>
+                <Link href='/'>
+                    <MenuItem style={divStyle.myfont} onClick={handleClose}>Home</MenuItem>
+                </Link>
+                <Link href='/about'>
+                    <MenuItem style={divStyle.myfont} onClick={handleClose}>About</MenuItem>
+                </Link>
             </Menu>
         </div>
     );

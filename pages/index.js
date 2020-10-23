@@ -1,20 +1,9 @@
-import React, {Component} from "react";
-import Pfapappbar from './components/pfapappbar';
-import Pfapfooter from './components/pfapfooter';
-import Pfapcontainer from "./components/pfapcontainer";
+import App from "./app";
+import React from "react";
 
-class App extends Component {
-
-    render() {
-        return (
-            <div>
-                <Pfapappbar/>
-                <Pfapcontainer/>
-                <Pfapfooter/>
-            </div>
-        );
-    }
+function HomePage() {
+    return <App />
 
 }
 
-export default App;
+export default HomePage;
