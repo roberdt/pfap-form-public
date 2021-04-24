@@ -26,7 +26,7 @@ class Pfapfooter extends Component {
         return (
             <div style={footerHTML}>
                 <br/>
-                <span style={footerStyle}>Copyright &#169; 2020 SafetyNetAccess.org &trade;   . All Rights Reserved.</span>
+                <span style={footerStyle}>Copyright &#169; 2021 SafetyNetAccess.org &trade; LLC   . All Rights Reserved.</span>
                 <br/>
                 <br/>
             </div>
