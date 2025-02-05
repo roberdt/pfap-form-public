@@ -30,10 +30,10 @@ class Pfapappbar extends Component {
                 <Box sx={{ flexGrow: 1 }}>
                     <AppBar position="static">
                         <Toolbar>
+                            <Pfapmenulist />
                             <Typography variant="h6" color="inherit">
                                 PFAP Form
-                            </Typography>
-                            <Pfapmenulist />
+                            </Typography>                            
                         </Toolbar>
                     </AppBar>
                 </Box>
