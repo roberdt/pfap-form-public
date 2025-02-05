@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { makeStyles } from '@mui/styles';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Pfapmenulist from './nav/pfapmenulist';
+import { Box } from '@mui/system';
 
 const theme = createTheme({
     palette: {
@@ -23,17 +23,11 @@ const theme = createTheme({
     },
 });
 
-const divStyle = {
-    root: {
-        flexGrow: 1,
-    },
-};
-
 class Pfapappbar extends Component {
     render() {
         return (
             <ThemeProvider theme={theme}>
-                <div style={divStyle.root}>
+                <Box sx={{ flexGrow: 1 }}>
                     <AppBar position="static">
                         <Toolbar>
                             <Typography variant="h6" color="inherit">
@@ -42,7 +36,7 @@ class Pfapappbar extends Component {
                             <Pfapmenulist />
                         </Toolbar>
                     </AppBar>
-                </div>
+                </Box>
             </ThemeProvider>
         );
     }

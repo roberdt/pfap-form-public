@@ -1,10 +1,9 @@
 import React from 'react';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuIcon from "@material-ui/icons/Menu";
-import IconButton from "@material-ui/core/IconButton";
-import Link from 'next/link'
-import About from "../../about";
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import MenuIcon from '@mui/icons-material/Menu';
+import IconButton from '@mui/material/IconButton';
+import Link from 'next/link';
 
 export default function Pfapmenulist() {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -26,30 +25,20 @@ export default function Pfapmenulist() {
     return (
         <div>
             <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleClick}>
-                <MenuIcon/>
+                <MenuIcon />
             </IconButton>
             <Menu
-                id="pfap-menu"
-                keepMounted
                 anchorEl={anchorEl}
-                getContentAnchorEl={null}
-                anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
-                }}
-                transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'left',
-                }}
+                keepMounted
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <Link href='/'>
-                    <MenuItem style={divStyle.myfont} onClick={handleClose}>Home</MenuItem>
-                </Link>
-                <Link href='/about'>
-                    <MenuItem style={divStyle.myfont} onClick={handleClose}>About</MenuItem>
-                </Link>
+                <MenuItem onClick={handleClose}>
+                    <Link href="/about">
+                        <a style={divStyle.myfont}>About</a>
+                    </Link>
+                </MenuItem>
+                {/* Add more MenuItems as needed */}
             </Menu>
         </div>
     );
