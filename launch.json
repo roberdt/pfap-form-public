@@ -9,9 +9,8 @@
             "type": "node",
             "request": "launch",
             "name": "Next.js: Dev",
-            "runtimeExecutable": "npm",
+            "runtimeExecutable": "yarn",
             "runtimeArgs": [
-                "run",
                 "dev"
             ],
             "port": 9229,
@@ -22,11 +21,11 @@
             "type": "node",
             "request": "launch",
             "name": "Next.js: Build",
-            "runtimeExecutable": "npm",
+            "runtimeExecutable": "yarn",
             "runtimeArgs": [
-                "run",
                 "build"
             ],
+            "port": 9229,
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
         },
