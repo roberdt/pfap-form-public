@@ -34,7 +34,7 @@ export default function Pfapmenulist() {
                 onClose={handleClose}
             >
                 <MenuItem onClick={handleClose}>
-                    <Link href="/about">
+                    <Link href="/about" legacyBehavior>
                         <a style={divStyle.myfont}>About</a>
                     </Link>
                 </MenuItem>
