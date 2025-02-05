@@ -1,13 +1,12 @@
-import React, {Component} from 'react';
-import {createMuiTheme} from '@material-ui/core/styles';
-import {makeStyles} from '@material-ui/core/styles';
-import {ThemeProvider} from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+import React, { Component } from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import Pfapmenulist from './nav/pfapmenulist';
 
-const theme = createMuiTheme({
+const theme = createTheme({
     palette: {
         primary: {
             light: '#338fd3',
@@ -28,27 +27,19 @@ const divStyle = {
     root: {
         flexGrow: 1,
     },
-    menuButton: {
-        marginRight: theme.spacing(0),
-    },
 };
 
 class Pfapappbar extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <ThemeProvider theme={theme}>
                 <div style={divStyle.root}>
-                    <AppBar position="static" color="primary">
-                        <Toolbar variant="dense">
-                            <Pfapmenulist/>
-                            <Typography variant="h6">
-                                Patient Financial Assistance Forms
+                    <AppBar position="static">
+                        <Toolbar>
+                            <Typography variant="h6" color="inherit">
+                                PFAP Form
                             </Typography>
+                            <Pfapmenulist />
                         </Toolbar>
                     </AppBar>
                 </div>

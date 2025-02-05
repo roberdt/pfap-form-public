@@ -1,10 +1,8 @@
-import React, {Component} from 'react';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-
+import React, { Component } from 'react';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 
 class Pfapcontainer extends Component {
-
     render() {
         const containerHTML = {
             borderStyle: 'dashed',
@@ -18,7 +16,7 @@ class Pfapcontainer extends Component {
                 </Container>
             </div>
         );
-    };
+    }
 }
 
 export default Pfapcontainer;
