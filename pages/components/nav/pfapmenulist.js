@@ -3,10 +3,13 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
-import Link from 'next/link';
+import Divider from '@mui/material/Divider';
+import { useRouter } from 'next/router';
 
 export default function Pfapmenulist() {
     const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const router = useRouter();
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -33,11 +36,25 @@ export default function Pfapmenulist() {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
             >
-                <MenuItem onClick={handleClose}>
-                    <Link href="/about" legacyBehavior>
-                        <a style={divStyle.myfont}>About</a>
-                    </Link>
+                {/* Use router.push so we can close the menu then navigate */}
+                <MenuItem onClick={() => { handleClose(); router.push('/'); }}>
+                    <span style={divStyle.myfont}>Home</span>
                 </MenuItem>
+                <MenuItem onClick={() => { handleClose(); router.push('/login'); }}>
+                    <span style={divStyle.myfont}>Login</span>
+                </MenuItem>
+
+                <MenuItem onClick={() => { handleClose(); router.push('/register'); }}>
+                    <span style={divStyle.myfont}>Register</span>
+                </MenuItem>
+
+               {/* horizontal separator between groups */}
+                <Divider sx={{ my: 0.5 }} />
+
+                <MenuItem onClick={() => { handleClose(); router.push('/about'); }}>
+                    <span style={divStyle.myfont}>About</span>
+                </MenuItem>
+
                 {/* Add more MenuItems as needed */}
             </Menu>
         </div>
