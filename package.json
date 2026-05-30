@@ -13,17 +13,16 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
-    "@react-buddy/ide-toolbox-next": "latest",
-    "@react-buddy/palette-mui": "latest",
-        "bcryptjs": "latest",
-        "mysql2": "latest",
-    "next": "latest",
+    "bcryptjs": "latest",
+    "mysql2": "latest",
+    "next": "^16.2.6",
     "react": "latest",
     "react-dom": "latest",
     "react-router-dom": "latest"
   },
   "devDependencies": {
     "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "@types/react-dom": "latest",
+    "typescript": "6.0.3"
   }
 }
